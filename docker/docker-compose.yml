@@ -1,0 +1,18 @@
+version: '3.8'
+
+networks:
+  default:
+
+services:
+   db:
+     image: mysql:5.7
+     container_name: mysql
+     ports:
+       - 3306:3306
+     volumes:
+       - ./create.sql:/docker-entrypoint-initdb.d/create.sql
+     environment:
+       MYSQL_ROOT_PASSWORD: pass
+       MYSQL_DATABASE: workshop_security
+       
+    
