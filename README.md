@@ -3,7 +3,16 @@
 This application developed for Spring Security capabilities. 
 At the beginning there exist only one endpoint without security. 
 <br/>
-In time I will add new branches with different capabilities. 
+In time I will add new branches with different capabilities.
+
+# Branch security-first-init
+
+With this branch added features detailed below. 
+
+|Feature |Description|
+|-----|--------|
+|pom.xml | Added Spring Security dependencies to pom.xml       |
+|WebSecurityConfig.java  | Added `inMemoryAuthentication` to REST API      |
 
 # Technologies
 
@@ -35,6 +44,11 @@ mvnw package
 
 This endpoint return SecurityResponse object. That means successfully access the resource.
 
+## Authentication Detail 
+
+|Authentication Type |User Name | Password |
+|-----|--------|--------|
+|Basic Authentication | user | pass|
 
 ### Response
 
@@ -46,9 +60,15 @@ This endpoint return SecurityResponse object. That means successfully access the
     }
 ```
 
-## POST Endpoint `/api/v1/security/get/`
+## POST Endpoint `/api/v1/security/post/`
 
 This endpoint return SecurityResponse object. That means successfully access the resource.
+
+## Authentication Detail
+
+|Authentication Type |User Name | Password |
+|-----|--------|--------|
+|Basic Authentication | user | pass|
 
 ### Request 
 
