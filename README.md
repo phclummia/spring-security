@@ -28,7 +28,7 @@ After that you need to update [application.yml](src/main/resources/application.y
 ## There isn't valid database (Docker Solution)
 
 If you don't have valid database, you can use  [docker-compose.yml](docker/docker-compose.yml) 
-for creating database, tables and relations at a container.
+for creating database, tables and relations in a container.
 <br/>
 Run the below command in the `docker` directory.
 
