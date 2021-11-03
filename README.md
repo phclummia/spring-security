@@ -24,11 +24,11 @@ Changelog
 
 ## spring.jpa.hibernate.ddl-auto
 
-[JPA DDL-UPDATE](assests/hibernate_ddl_update.jpg)
+![JPA DDL-UPDATE](assests/hibernate_ddl_update.jpg)
 
 ## spring.jpa.hibernate.physical-strategy
 
-[JPA DDL-UPDATE](assests/hibernate_physical_strategy.jpg)
+![JPA DDL-UPDATE](assests/hibernate_physical_strategy.jpg)
 
 # Branch jdbc-authentication
 
