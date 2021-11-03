@@ -13,6 +13,8 @@ spring:
       # if mismatch not start application
       # at the beginning if you set validate look for at target database "hibernate_sequence" table
       # will get exception. You can use "update" at the beginning, then you can select validate for value.
+      # Or you can add this config detailed below thread
+      # https://mkyong.com/spring-boot/spring-boot-mysql-table-db_name-hibernate_sequence-doesnt-exist/
       ddl-auto: update
       naming:
         # if you not defined this configuration spring-jpa create tables and columns in lowercase format
