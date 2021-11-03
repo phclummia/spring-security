@@ -1,4 +1,4 @@
-# Spring Send Mail API
+# Spring Security Studies
 
 This application developed for Spring Security capabilities. 
 At the beginning there exist only one endpoint without security. 
