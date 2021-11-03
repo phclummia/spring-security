@@ -18,8 +18,11 @@ import javax.sql.DataSource;
 @EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
+    //@Autowired
+    //private DataSource dataSource;
+
     @Autowired
-    private DataSource dataSource;
+    private CustomAuthenticationProvider authProvider;
 
     private static final String[] AUTH_WHITELIST = {
             // -- Swagger UI v2
@@ -54,8 +57,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     protected void configure(final AuthenticationManagerBuilder auth) throws Exception {
         //auth.inMemoryAuthentication()
         //        .withUser("user").password(passwordEncoder().encode("pass")).roles("USER");
-        auth.jdbcAuthentication()
-                .dataSource(dataSource);
+        //auth.jdbcAuthentication()
+        //        .dataSource(dataSource);
+        auth.authenticationProvider(authProvider);
 
     }
 

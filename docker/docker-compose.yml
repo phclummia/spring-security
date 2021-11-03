@@ -13,6 +13,5 @@ services:
        - ./create.sql:/docker-entrypoint-initdb.d/create.sql
      environment:
        MYSQL_ROOT_PASSWORD: pass
-       MYSQL_DATABASE: workshop_security
-       
-    
+       MYSQL_DATABASE: workshop_security_custom_table
+

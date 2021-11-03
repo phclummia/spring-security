@@ -3,7 +3,19 @@ logging:
     root: INFO
 spring:
   datasource:
-    url: jdbc:mysql://localhost:3306/workshop_security
+    url: jdbc:mysql://localhost:3306/workshop_security_custom_table
     username: root
     password: pass
     driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      # validate compare repositories with database tables
+      # if mismatch not start application
+      # at the beginning if you set validate look for at target database "hibernate_sequence" table
+      # will get exception. You can use "update" at the beginning, then you can select validate for value.
+      ddl-auto: update
+      naming:
+        # if you not defined this configuration spring-jpa create tables and columns in lowercase format
+        # if you set "PhysicalNamingStrategyStandardImpl" create tables and columns according to
+        #@Table(name = "USERS_CUSTOM"), @Column(name = "username")
+        physical-strategy:

@@ -5,6 +5,31 @@ At the beginning there exist only one endpoint without security.
 <br/>
 In time I will add new branches with different capabilities.
 
+
+# Branch database-customization
+
+With this branch `jdbcAuthentication` customized specific user table. 
+With new table need to implement new table repository.
+
+Changelog
+
+|File |Description|
+|-----|--------|
+|[create.sql](docker/create.sql)  | Create Table and Insert Queries changed according to column's names       |
+|[data](src/main/java/com/workshop/springsecurity/data)   | Added `data` package for JPA flows      |
+|[service](src/main/java/com/workshop/springsecurity/service)   | Added `service` package to access repository      |
+|[CustomAuthenticationProvider.java](src/main/java/com/workshop/springsecurity/security/CustomAuthenticationProvider.java)   | Added `CustomAuthenticationProvider` to check over custom table      |
+|[application.yml](src/main/resources/application.yml)   | Added new database name and added minor `hibernate` config `physical-strategy`      |
+
+
+## spring.jpa.hibernate.ddl-auto
+
+[JPA DDL-UPDATE](assests/hibernate_ddl_update.jpg)
+
+## spring.jpa.hibernate.physical-strategy
+
+[JPA DDL-UPDATE](assests/hibernate_physical_strategy.jpg)
+
 # Branch jdbc-authentication
 
 With this branch `inMemoryAuthentication` convert to `jdbcAuthentication`. 
