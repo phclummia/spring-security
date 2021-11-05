@@ -9,10 +9,11 @@ In time I will add new branches with different capabilities.
 
 With this branch integrated oauth2 with a Third Party Identity and Access Management. Related articles about install IAM
 as Docker, Initialize Configuration's of IAM and Integrate Sprint Boot Security
-
+<br/>
 Keycloak : [link](https://www.keycloak.org/getting-started/getting-started-docker)
+<br/>
 Initialize and Integrate : [link](https://www.baeldung.com/spring-boot-keycloak)
-
+<br/>
 |File |Description|
 |-----|--------|
 |[create.sql](docker/create.sql)  | Table changed to a private resource which only authenticate user can select       |
@@ -23,7 +24,7 @@ Initialize and Integrate : [link](https://www.baeldung.com/spring-boot-keycloak)
 |[WebSecurityConfig.java](src/main/java/com/workshop/springsecurity/security/WebSecurityConfig.java)  | Updated according to oauh2 and Keycloak|
 |[WebController.java](src/main/java/com/workshop/springsecurity/controller/WebController.java)   | Added html's controllers|
 |[pom.xml](pom.xml)  | Added new dependencies|
-
+<br/>
 ** Some files deleted. You can check these files over history or other branches.
 
 ## Keycloak Generate Token
