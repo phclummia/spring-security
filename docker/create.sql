@@ -1,13 +1,20 @@
-CREATE TABLE USERS_CUSTOM (
-   id INT NOT NULL AUTO_INCREMENT,
-   username VARCHAR(250) NOT NULL,
-   password VARCHAR(250) NOT NULL,
-   role VARCHAR(250) NOT NULL,
-   PRIMARY KEY (id)
+
+CREATE TABLE CustomerEntity (
+  id bigint(20) NOT NULL AUTO_INCREMENT,
+  address varchar(255) DEFAULT NULL,
+  name varchar(255) DEFAULT NULL,
+  serviceRendered varchar(255) DEFAULT NULL,
+  PRIMARY KEY (id)
 );
 
 
-INSERT INTO USERS_CUSTOM (username, password, role)
-values ('user','$2a$10$a07FaSKwo2xAwEj4UJYa0etu8sY5o9onG/0psQ2FxzjviueQUYnbm', 'ROLE_USER');
+INSERT INTO CustomerEntity (address, name, serviceRendered)
+values ('1111 foo blvd','Foo Industries', 'Important services');
+
+INSERT INTO CustomerEntity (address, name, serviceRendered)
+values ('2222 bar street','Bar LLP', 'Important services');
+
+INSERT INTO CustomerEntity (address, name, serviceRendered)
+values ('33 main street','Big LLC', 'Important services');
 
 commit;
